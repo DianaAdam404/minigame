@@ -1,20 +1,56 @@
 .app {
-    flex: 1;
+    min-height: 100vh;
     display: grid;
     place-items: center;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .app-light {
-    background: rgb(255, 0, 0);
-    color: #222;
+    background: #f3f4f6;
+    color: #111827;
 }
 
 .app-dark {
-    background: #00ff0d;
-    color: white;
+    background: #111827;
+    color: #f9fafb;
+}
+
+.theme-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.debug-text {
+    margin: 0;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.8;
 }
 
 button {
-    padding: 8px 12px;
+    padding: 0.8rem 1.2rem;
     cursor: pointer;
+    border: none;
+    border-radius: 0.75rem;
+    background: #7c3aed;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
 }
